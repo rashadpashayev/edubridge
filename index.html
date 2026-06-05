@@ -44,13 +44,14 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<!-- overflow-x-hidden eklenerek yatay kayma kesin olarak engellendi -->
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
     <!-- Naviqasiya -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Loqo Sahəsi (İkon silindi, sadəcə mətn) -->
+                <!-- Loqo Sahəsi -->
                 <div class="flex items-center">
                     <span class="text-3xl font-black tracking-tighter text-slate-900">EDUBRIDGE</span>
                 </div>
@@ -123,12 +124,14 @@
         <!-- Məktəb Fənləri -->
         <div class="mb-24">
             <div class="flex items-center gap-6 mb-12">
-                <h3 class="text-sm font-black text-blue-600 uppercase tracking-[0.3em] whitespace-nowrap">Məktəb Hazırlığı</h3>
-                <div class="h-px bg-slate-200 w-full"></div>
+                <!-- Mobilde kaymayı önlemek için whitespace-nowrap kaldırıldı veya ortalandı -->
+                <h3 class="text-sm font-black text-blue-600 uppercase tracking-[0.2em] md:tracking-[0.3em] text-center w-full md:w-auto">Məktəb Hazırlığı</h3>
+                <div class="h-px bg-slate-200 w-full hidden md:block"></div>
             </div>
+            <!-- Kartların padding değerleri mobilde düşürüldü (p-6 md:p-10) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                 <!-- Riyaziyyat -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600">
                         <i class="fas fa-calculator text-2xl"></i>
                     </div>
@@ -136,7 +139,7 @@
                     <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Buraxılış & Qəbul</p>
                 </div>
                 <!-- İngilis Dili -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600">
                         <i class="fas fa-language text-2xl"></i>
                     </div>
@@ -144,7 +147,7 @@
                     <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">General</p>
                 </div>
                 <!-- Coğrafiya -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600">
                         <i class="fas fa-map-marked-alt text-2xl"></i>
                     </div>
@@ -152,7 +155,7 @@
                     <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Dünya & Yerli</p>
                 </div>
                 <!-- Tarix -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600">
                         <i class="fas fa-monument text-2xl"></i>
                     </div>
@@ -160,7 +163,7 @@
                     <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Ümumi Tarix & Azərbaycan Tarixi</p>
                 </div>
                 <!-- Azərbaycan Dili -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm card-hover text-center">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600">
                         <i class="fas fa-feather-alt text-2xl"></i>
                     </div>
@@ -173,26 +176,27 @@
         <!-- Peşəkar Sahələr -->
         <div>
             <div class="flex items-center gap-6 mb-12">
-                <h3 class="text-sm font-black text-blue-600 uppercase tracking-[0.3em] whitespace-nowrap">Peşəkar Təlimlər</h3>
-                <div class="h-px bg-slate-200 w-full"></div>
+                <h3 class="text-sm font-black text-blue-600 uppercase tracking-[0.2em] md:tracking-[0.3em] text-center w-full md:w-auto">Peşəkar Təlimlər</h3>
+                <div class="h-px bg-slate-200 w-full hidden md:block"></div>
             </div>
+            <!-- Kartların padding değerleri mobilde düşürüldü -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="group bg-slate-900 text-white p-12 rounded-[3rem] flex flex-col md:flex-row items-center gap-8 card-hover relative overflow-hidden">
+                <div class="group bg-slate-900 text-white p-8 md:p-12 rounded-[3rem] flex flex-col md:flex-row items-center gap-8 card-hover relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                     <div class="w-20 h-20 bg-blue-600 rounded-3xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-600/30">
                         <i class="fas fa-bullhorn text-3xl"></i>
                     </div>
-                    <div>
+                    <div class="text-center md:text-left">
                         <h4 class="text-3xl font-black mb-3">PR Təlimi</h4>
                         <p class="text-slate-400 leading-relaxed font-light">İctimaiyyətlə əlaqələr və brend kommunikasiyası üzrə praktiki biliklər.</p>
                     </div>
                 </div>
-                <div class="group bg-slate-900 text-white p-12 rounded-[3rem] flex flex-col md:flex-row items-center gap-8 card-hover relative overflow-hidden">
+                <div class="group bg-slate-900 text-white p-8 md:p-12 rounded-[3rem] flex flex-col md:flex-row items-center gap-8 card-hover relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                     <div class="w-20 h-20 bg-blue-600 rounded-3xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-600/30">
                         <i class="fas fa-share-alt text-3xl"></i>
                     </div>
-                    <div>
+                    <div class="text-center md:text-left">
                         <h4 class="text-3xl font-black mb-3">SMM Təlimi</h4>
                         <p class="text-slate-400 leading-relaxed font-light">Sosial media marketinq, alqoritmlər və effektiv reklam idarəçiliyi.</p>
                     </div>
@@ -228,14 +232,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 grid grid-cols-2 gap-6">
-                    <div class="bg-white p-12 rounded-[3.5rem] shadow-xl text-center flex flex-col justify-center">
-                        <span class="text-5xl font-black text-blue-600">100%</span>
-                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest mt-2">Dəqiqlik</span>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4 md:gap-6 w-full">
+                    <div class="bg-white p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] shadow-xl text-center flex flex-col justify-center">
+                        <span class="text-4xl md:text-5xl font-black text-blue-600">100%</span>
+                        <span class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mt-2">Dəqiqlik</span>
                     </div>
-                    <div class="bg-blue-600 p-12 rounded-[3.5rem] shadow-xl text-center text-white flex flex-col justify-center translate-y-8">
-                        <span class="text-5xl font-black">24/7</span>
-                        <span class="text-xs font-black opacity-80 uppercase tracking-widest mt-2">Dəstək</span>
+                    <div class="bg-blue-600 p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] shadow-xl text-center text-white flex flex-col justify-center translate-y-4 md:translate-y-8">
+                        <span class="text-4xl md:text-5xl font-black">24/7</span>
+                        <span class="text-[10px] md:text-xs font-black opacity-80 uppercase tracking-widest mt-2">Dəstək</span>
                     </div>
                 </div>
             </div>
@@ -244,40 +248,46 @@
 
     <!-- Əlaqə -->
     <section id="contact" class="py-32 px-4 max-w-7xl mx-auto">
-        <div class="bg-white rounded-[4rem] p-12 md:p-24 text-center shadow-2xl border border-slate-100">
+        <!-- Mobilde aşırı boşluğu engellemek için padding (p-8 md:p-24) yapıldı -->
+        <div class="bg-white rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-24 text-center shadow-2xl border border-slate-100 overflow-hidden">
             <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter">Bizə Qoşulun</h2>
             <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-16 font-light leading-relaxed">Qeydiyyat və ya suallarınız üçün aşağıdakı kanallardan bizimlə birbaşa əlaqə saxlaya bilərsiniz.</p>
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-6">
                 <!-- WhatsApp -->
-                <a href="https://wa.me/994505988369" target="_blank" class="w-full md:w-auto whatsapp-btn text-white px-12 py-7 rounded-[2.5rem] font-black text-xl shadow-2xl flex items-center justify-center gap-4 transition-transform hover:scale-105 active:scale-95">
+                <a href="https://wa.me/994505988369" target="_blank" class="w-full md:w-auto whatsapp-btn text-white px-8 md:px-12 py-6 md:py-7 rounded-[2rem] md:rounded-[2.5rem] font-black text-lg md:text-xl shadow-2xl flex items-center justify-center gap-4 transition-transform hover:scale-105 active:scale-95">
                     <i class="fab fa-whatsapp text-3xl"></i> WhatsApp-da Yazın
                 </a>
                 
                 <div class="flex gap-4 w-full md:w-auto justify-center">
                     <!-- Instagram -->
-                    <a href="https://instagram.com/edubridge.az" target="_blank" class="w-24 h-24 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-[2rem] flex items-center justify-center text-4xl transition-transform hover:scale-110 shadow-lg active:scale-95">
+                    <a href="https://instagram.com/edubridge.az" target="_blank" class="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center text-3xl md:text-4xl transition-transform hover:scale-110 shadow-lg active:scale-95">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <!-- Facebook -->
-                    <a href="https://www.facebook.com/edubridge.aze" target="_blank" class="w-24 h-24 bg-[#1877F2] text-white rounded-[2rem] flex items-center justify-center text-4xl transition-transform hover:scale-110 shadow-lg active:scale-95">
+                    <a href="https://www.facebook.com/edubridge.aze" target="_blank" class="w-20 h-20 md:w-24 md:h-24 bg-[#1877F2] text-white rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center text-3xl md:text-4xl transition-transform hover:scale-110 shadow-lg active:scale-95">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="mt-24 pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-center gap-12 text-slate-400 font-bold uppercase text-xs tracking-[0.2em]">
-                <div class="flex items-center gap-3"><i class="fas fa-envelope text-blue-600 text-base"></i>edubridgetehsilmerkezi@gmail.com</div>
-                <div class="flex items-center gap-3"><i class="fas fa-phone-alt text-blue-600 text-base"></i> +994 998 90 00 71</div>
+            <!-- E-posta adresi için 'break-all' sınıfı eklenerek mobilde alt satıra geçmesi sağlandı ve taşma önlendi -->
+            <div class="mt-20 md:mt-24 pt-10 md:pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-center gap-8 md:gap-12 text-slate-400 font-bold uppercase text-xs tracking-widest md:tracking-[0.2em]">
+                <div class="flex flex-col md:flex-row items-center gap-3 break-all text-center">
+                    <i class="fas fa-envelope text-blue-600 text-base shrink-0 mb-1 md:mb-0"></i>edubridgetehsilmerkezi@gmail.com
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <i class="fas fa-phone-alt text-blue-600 text-base shrink-0 mb-1 md:mb-0"></i> +994 998 90 00 71
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-16 px-4 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+    <footer class="bg-white py-12 px-4 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 text-center md:text-left">
             <span class="text-2xl font-black text-slate-900 tracking-tighter">EDUBRIDGE</span>
-            <div class="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">
+            <div class="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em]">
                 © 2026 EDUBRIDGE. Bilik ilə Gələcək Arasında Rəqəmsal Körpü.
             </div>
             <div class="flex gap-8 text-slate-900 font-black text-xs tracking-widest uppercase">
